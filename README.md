@@ -33,6 +33,7 @@ current directory
 
 
 Available methods (they have take a `SplFileInfo` object as argument)
+
 - `getText`
 - `getTextMain`
 - `getXhtml`
