@@ -54,7 +54,7 @@ class TikaApp
         return $this->execute("--html", $file);
     }
 
-    public function getMetadata(\SplFileInfo $file)
+    public function getMetaData(\SplFileInfo $file)
     {
         $jsonMeta = $this->execute("--json", $file);
         return json_decode($jsonMeta);
