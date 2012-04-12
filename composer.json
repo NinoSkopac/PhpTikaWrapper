@@ -1,0 +1,19 @@
+{
+    "name": "enzim/tika-wrapper",
+    "description": "This is a simple PHP Wrapper for Apache Tika (using the tika-app jar)",
+    "keywords" : ["tika", "apache tika", "pdf", "doc", "docx", "odt", "text processing"],
+
+
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/process": "2.1.*"
+    },
+
+
+    "autoload": {
+        "psr-0": {
+            "Enzim\\Lib\\TikaWrapper": ""
+        }
+    },
+    "target-dir": "Enzim/Lib/TikaWrapper"
+}
