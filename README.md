@@ -48,5 +48,5 @@ TODO
 - write doc
 - set a pretty print option (to use option -r for html/xhtml)
 - write tests 
-- allows the use of tika-server transparently to avoid loaing the JVM on
+- allows the use of tika-server transparently to avoid loading the JVM on
   each request
