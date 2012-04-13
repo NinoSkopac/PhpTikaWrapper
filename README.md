@@ -62,23 +62,17 @@ Available methods (they all take a `SplFileInfo` object as argument)
 - `getXhtml(\SplFileInfo $file)` returns a string containing an XHTML
   conversion of the document
 - `getContentType(\SplFileInfo $file)` returns the content type of the
-  document. Example outputs:
+  document. Example outputs for opendocument, docx and pdf:
   
         application/vnd.oasis.opendocument.text
-  
-  or (docx)
-  
         application/vnd.openxmlformats-officedocument.wordprocessingml.document
-  
-  or (pdf)
-  
         application/pdf
    
 - `getLanguage(\SplFileInfo $file)` returns the language of the
   documeent. Example output: `en` for english, `fr` for french, etc
 - `getMetaData(\SplFileInfo $file)` returns a PHP array with the
   metadata. Ex:
-  
+        Array  
         (
             [Character Count] => 41
             [Content-Length] => 8686
