@@ -60,6 +60,8 @@ Available methods (they all take a `SplFileInfo` object as argument)
 - `getTextMain(\SplFileInfo $file)` returns a string containing only the
   main text of the doc
 - `getXhtml(\SplFileInfo $file)` returns a string containing an XHTML
+  (xml-valid) conversion of the document
+- `getHtml(\SplFileInfo $file)` returns a string containing an HTML
   conversion of the document
 - `getContentType(\SplFileInfo $file)` returns the content type of the
   document. Example outputs for opendocument, docx and pdf:
@@ -72,6 +74,7 @@ Available methods (they all take a `SplFileInfo` object as argument)
   documeent. Example output: `en` for english, `fr` for french, etc
 - `getMetaData(\SplFileInfo $file)` returns a PHP array with the
   metadata. Ex:
+   
         Array  
         (
             [Character Count] => 41
