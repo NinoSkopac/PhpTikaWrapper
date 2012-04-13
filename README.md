@@ -64,15 +64,15 @@ Available methods (they all take a `SplFileInfo` object as argument)
 - `getContentType(\SplFileInfo $file)` returns the content type of the
   document. Example outputs:
   
-      application/vnd.oasis.opendocument.text
+        application/vnd.oasis.opendocument.text
   
   or (docx)
   
-      application/vnd.openxmlformats-officedocument.wordprocessingml.document
+        application/vnd.openxmlformats-officedocument.wordprocessingml.document
   
   or (pdf)
   
-      application/pdf
+        application/pdf
    
 - `getLanguage(\SplFileInfo $file)` returns the language of the
   documeent. Example output: `en` for english, `fr` for french, etc
