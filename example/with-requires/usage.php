@@ -4,7 +4,7 @@ require 'bootstrap.php';
 
 use Enzim\Lib\TikaWrapper\TikaApp;
 
-$testFile = new \SplFileInfo(__DIR__."/test.odt");
+$testFile = new \SplFileInfo(__DIR__."/../test.odt");
 
 $tikaApp = new TikaApp();
 
