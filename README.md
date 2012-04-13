@@ -65,16 +65,20 @@ Available methods (they all take a `SplFileInfo` object as argument)
   document. Example outputs:
   
       application/vnd.oasis.opendocument.text
+  
   or (docx)
   
       application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  
   or (pdf)
   
       application/pdf
+   
 - `getLanguage(\SplFileInfo $file)` returns the language of the
   documeent. Example output: `en` for english, `fr` for french, etc
 - `getMetaData(\SplFileInfo $file)` returns a PHP array with the
-      metadata. Ex:
+  metadata. Ex:
+  
         (
             [Character Count] => 41
             [Content-Length] => 8686
