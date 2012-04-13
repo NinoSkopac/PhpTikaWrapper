@@ -6,12 +6,14 @@ executable.
 Install with composer
 ------------------------
 Add the package dependency `enzim/tika-wrapper` in your composer.json 
+
     {
         "require": {
             "enzim/tika-wrapper": "*" 
         }   
     }
 Install the neww package with composer, and that's it!
+
     php composer.phar install
 
 
@@ -22,6 +24,7 @@ Example installation/usage
 ------------------------
 
 See example/ (more docs to come soon) for an example:
+
     git clone git@github.com:pierroweb/PhpTikaWrapper.git
     cd PhpTikaWrapper
     
@@ -60,10 +63,13 @@ Available methods (they all take a `SplFileInfo` object as argument)
   conversion of the document
 - `getContentType(\SplFileInfo $file)` returns the content type of the
   document. Example outputs:
+  
       application/vnd.oasis.opendocument.text
   or (docx)
+  
       application/vnd.openxmlformats-officedocument.wordprocessingml.document
   or (pdf)
+  
       application/pdf
 - `getLanguage(\SplFileInfo $file)` returns the language of the
   documeent. Example output: `en` for english, `fr` for french, etc
