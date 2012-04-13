@@ -1,7 +1,17 @@
 This is a simple PHP Wrapper for Apache Tika.
 
-It uses the Symfony Process component to call the tika-app jar
-executable.
+It allows the developer to retrieve text, metadata and language from complex
+documents.
+
+
+Supported formats
+-----------------
+
+It supports opendocument, office .doc and .docx, pdf, images, videos and
+a lot more !
+
+See http://tika.apache.org/1.1/formats.html for details.
+
 
 Install with composer
 ------------------------
@@ -12,9 +22,13 @@ Add the package dependency `enzim/tika-wrapper` in your composer.json
             "enzim/tika-wrapper": "*" 
         }   
     }
+
 Install the neww package with composer, and that's it!
 
     php composer.phar install
+
+For convenience, the package include the tika-app jar file, which is
+quite big (25MB). _The download may take time!_
 
 
 See http://packagist.org for more details. (Don't forget to add 
@@ -109,8 +123,16 @@ Available methods (they all take a `SplFileInfo` object as argument)
 
 TODO
 ------------------------
-- write doc
 - set a pretty print option (to use option -r for html/xhtml)
 - write tests 
 - allows the use of tika-server transparently to avoid loading the JVM on
   each request
+
+
+
+Credits
+-------
+
+- http://tika.apache.org
+- It uses the Symfony Process component 
+  http://symfony.com/doc/current/components/process.html
