@@ -8,7 +8,7 @@ class TikaApp
 {
     private function execute($option, \SplFileInfo $file)
     {
-        $command = 'java -jar tika-app-1.1.jar '.$option.' '.$file->getRealPath();
+        $command = 'java -jar tika-app-1.1.jar '.$option.' '."'".$file->getRealPath()."'";
         $cwd = __DIR__.'/vendor/';
         $process = new Process($command);
         $process->setWorkingDirectory($cwd);
