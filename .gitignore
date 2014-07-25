@@ -3,3 +3,4 @@ composer.lock
 vendor
 
 !vendor/tika-app-1.1.jar
+!vendor/tika-app-1.5.jar

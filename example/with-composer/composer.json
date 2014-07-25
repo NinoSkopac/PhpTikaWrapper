@@ -1,5 +1,5 @@
 {
     "require": {
-        "enzim/tika-wrapper": "*"
+        "enzim/tika-wrapper": "dev-master"
     }
 }

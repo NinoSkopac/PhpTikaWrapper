@@ -55,38 +55,35 @@ In your own project, assuming you have an opendocument test.odt in the
 current directory
 
     <?php
-    use Enzim\Lib\TikaWrapper\TikaApp;
-     
-    $testFile = new \SplFileInfo(__DIR__."/test.odt");
-    $tikaApp = new TikaApp();
-     
-    $plaintext = $tikaApp->getText($testFile);
-     
-    $metadataArray = $tikaApp->getMetaData($testFile);
-    
-    $language = $tikaApp->getLanguage($testFile);
+    use Enzim\Lib\TikaWrapper\TikaWrapper;
+
+    $testFile = __DIR__."/test.odt";
+
+    $plaintext = TikaWrapper::getText($testFile);
+    $metadataArray = TikaWrapper::getMetaData($testFile);
+    $language = TikaWrapper::getLanguage($testFile);
 
 
-Available methods (they all take a `SplFileInfo` object as argument)
+Available methods (they all take a string, the full path of the file, as argument)
 
-- `getText(\SplFileInfo $file)` returns a string containing the document
+- `getText($file)` returns a string containing the document
   in plain-text
-- `getTextMain(\SplFileInfo $file)` returns a string containing only the
+- `getTextMain($file)` returns a string containing only the
   main text of the doc
-- `getXhtml(\SplFileInfo $file)` returns a string containing an XHTML
+- `getXHTML($file)` returns a string containing an XHTML
   (xml-valid) conversion of the document
-- `getHtml(\SplFileInfo $file)` returns a string containing an HTML
+- `getHTML($file)` returns a string containing an HTML
   conversion of the document
-- `getContentType(\SplFileInfo $file)` returns the content type of the
+- `getContentType($file)` returns the content type of the
   document. Example outputs for opendocument, docx and pdf:
   
         application/vnd.oasis.opendocument.text
         application/vnd.openxmlformats-officedocument.wordprocessingml.document
         application/pdf
    
-- `getLanguage(\SplFileInfo $file)` returns the language of the
+- `getLanguage($file)` returns the language of the
   documeent. Example output: `en` for english, `fr` for french, etc
-- `getMetaData(\SplFileInfo $file)` returns a PHP array with the
+- `getMetaData($file)` returns a PHP array with the
   metadata. Ex:
    
         Array  
@@ -124,10 +121,8 @@ Available methods (they all take a `SplFileInfo` object as argument)
 TODO
 ------------------------
 - set a pretty print option (to use option -r for html/xhtml)
-- write tests 
 - allows the use of tika-server transparently to avoid loading the JVM on
   each request
-
 
 
 Credits
