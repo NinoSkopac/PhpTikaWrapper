@@ -1,17 +1,17 @@
 <?php
 
-require 'vendor/.composer/autoload.php';
+require 'vendor/autoload.php';
 
-use Enzim\Lib\TikaWrapper\TikaApp;
+use Enzim\Lib\TikaWrapper\TikaWrapper;
 
-$testFile = new \SplFileInfo(__DIR__."/../test.odt");
+$testFile = '../../tests/test_files/test.odt';
 
-$tikaApp = new TikaApp();
+/*
+print_r(TikaWrapper::getText($testFile));
+print_r(TikaWrapper::getTextMain($testFile));
+print_r(TikaWrapper::getXHTML($testFile));
+print_r(TikaWrapper::getDocumentType($testFile));
+print_r(TikaWrapper::getLanguage($testFile));
+*/
 
-// print_r($tikaApp->getText($testFile));
-// print_r($tikaApp->getTextMain($testFile));
-// print_r($tikaApp->getXhtml($testFile));
-// print_r($tikaApp->getContentType($testFile));
-// print_r($tikaApp->getLanguage($testFile));
-
-print_r($tikaApp->getMetaData($testFile));
+print_r(TikaWrapper::getMetaData($testFile));
