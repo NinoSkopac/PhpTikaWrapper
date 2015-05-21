@@ -14,9 +14,8 @@
     },
 
     "autoload": {
-        "psr-0": {
-            "Enzim\\Lib\\TikaWrapper": ""
+        "psr-4": {
+            "Enzim\\Lib\\TikaWrapper\\": "src/"
         }
-    },
-    "target-dir": "Enzim/Lib/TikaWrapper"
+    }
 }

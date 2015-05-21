@@ -3,6 +3,7 @@
 namespace Enzim\Lib\TikaWrapper;
 
 use Symfony\Component\Process\Process;
+use SplFileInfo;
 
 class TikaWrapper {
 
@@ -14,7 +15,7 @@ class TikaWrapper {
      */
     private static function run($option, $fileName){
         $file = new SplFileInfo($fileName);
-        $tikaPath = vendor_path();
+        $tikaPath = __DIR__ . "/../vendor/";
         $shellCommand = 'java -jar tika-app-1.5.jar ' . $option . ' "' . $file->getRealPath() . '"';
 
         $process = new Process($shellCommand);
@@ -22,7 +23,7 @@ class TikaWrapper {
         $process->run();
 
         if (!$process->isSuccessful()) {
-            throw new RuntimeException($process->getErrorOutput());
+            throw new \RuntimeException($process->getErrorOutput());
         }
 
         return $process->getOutput();
