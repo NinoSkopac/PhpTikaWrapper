@@ -19,7 +19,7 @@ Add the package dependency `enzim/tika-wrapper` in your composer.json
 
     {
         "require": {
-            "enzim/tika-wrapper": "*" 
+            "enzim/tika-wrapper": "dev-master" 
         }   
     }
 
