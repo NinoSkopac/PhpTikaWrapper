@@ -16,7 +16,7 @@ class TikaWrapper {
     private static function run($option, $fileName){
         $file = new SplFileInfo($fileName);
         $tikaPath = __DIR__ . "/../vendor/";
-        $shellCommand = 'java -jar tika-app-1.5.jar ' . $option . ' "' . $file->getRealPath() . '"';
+        $shellCommand = 'java -jar tika-app-1.12.jar ' . $option . ' "' . $file->getRealPath() . '"';
 
         $process = new Process($shellCommand);
         $process->setWorkingDirectory($tikaPath);
