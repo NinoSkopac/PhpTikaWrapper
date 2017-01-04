@@ -13,7 +13,7 @@ class TikaWrapper {
      * @return string
      * @throws RuntimeException
      */
-    private static function run($option, $fileName){
+    protected static function run($option, $fileName){
         $file = new SplFileInfo($fileName);
         $tikaPath = __DIR__ . "/../vendor/";
         $shellCommand = 'java -jar tika-app-1.12.jar ' . $option . ' "' . $file->getRealPath() . '"';
