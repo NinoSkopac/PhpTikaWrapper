@@ -11,12 +11,12 @@ class TikaWrapper {
      * @param string $option
      * @param string $fileName
      * @return string
-     * @throws RuntimeException
+     * @throws \RuntimeException
      */
     protected static function run($option, $fileName){
         $file = new SplFileInfo($fileName);
         $tikaPath = __DIR__ . "/../vendor/";
-        $shellCommand = 'java -jar tika-app-1.12.jar ' . $option . ' "' . $file->getRealPath() . '"';
+        $shellCommand = 'java -jar tika-app-1.14.jar ' . $option . ' "' . $file->getRealPath() . '"';
 
         $process = new Process($shellCommand);
         $process->setWorkingDirectory($tikaPath);
