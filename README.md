@@ -19,7 +19,7 @@ Add the package dependency `enzim/tika-wrapper` in your composer.json
 
     {
         "require": {
-            "enzim/tika-wrapper": "~1.0" 
+            "ninoskopac/php-tika-wrapper": "~1.0" 
         }   
     }
 
