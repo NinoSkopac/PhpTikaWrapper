@@ -1,5 +1,5 @@
 {
-    "name": "NinoSkopac/PhpTikaWrapper",
+    "name": "ninoskopac/php-tika-wrapper",
     "description": "This is a simple PHP Wrapper for Apache Tika (using the tika-app jar)",
     "keywords" : ["tika", "apache tika", "pdf", "doc", "docx", "odt", "text processing"],
 
