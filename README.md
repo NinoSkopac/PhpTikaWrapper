@@ -123,6 +123,10 @@ TODO
 - set a pretty print option (to use option -r for html/xhtml)
 - allows the use of tika-server transparently to avoid loading the JVM on
   each request
+  
+Support for Tika-server
+------------------------
+Supported by this lib: https://github.com/vaites/php-apache-tika
 
 
 Credits
