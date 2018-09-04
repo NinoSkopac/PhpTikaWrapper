@@ -17,13 +17,15 @@ Install with composer
 ------------------------
 Add the package dependency `enzim/tika-wrapper` in your composer.json 
 
+```json
     {
         "require": {
             "ninoskopac/php-tika-wrapper": "~1.0" 
         }   
     }
+```
 
-Install the neww package with composer, and that's it!
+Install the new package with composer, and that's it!
 
     php composer.phar install
 
@@ -39,6 +41,7 @@ Example installation/usage
 
 See example/ (more docs to come soon) for an example:
 
+```bash
     git clone git@github.com:pierroweb/PhpTikaWrapper.git
     cd PhpTikaWrapper
     
@@ -46,6 +49,7 @@ See example/ (more docs to come soon) for an example:
     curl -s http://getcomposer.org/installer | php
     php composer.phar install
     php usage.php
+```
 
 
 Usage
@@ -54,6 +58,7 @@ Usage
 In your own project, assuming you have an opendocument test.odt in the
 current directory
 
+```php
     <?php
     use Enzim\Lib\TikaWrapper\TikaWrapper;
 
@@ -62,6 +67,7 @@ current directory
     $plaintext = TikaWrapper::getText($testFile);
     $metadataArray = TikaWrapper::getMetaData($testFile);
     $language = TikaWrapper::getLanguage($testFile);
+```
 
 
 Available methods (they all take a string, the full path of the file, as argument)
