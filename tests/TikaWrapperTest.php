@@ -1,6 +1,8 @@
 <?php
+use Enzim\Lib\TikaWrapper\TikaWrapper;
+use PHPUnit\Framework\TestCase;
 
-class TikaWrapperTest extends PHPUnit_Framework_TestCase {
+class TikaWrapperTest extends TestCase {
 
     public function testGetWordCount() {
         $sampleFile1 = test_files_path() . 'sample1.txt';
