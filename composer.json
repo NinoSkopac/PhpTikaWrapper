@@ -11,11 +11,11 @@
     "text processing"
   ],
   "require": {
-    "php": ">=5.3.2",
-    "symfony/process": "^4.3.4"
+    "php": "^7.2",
+    "symfony/process": "^4.3"
   },
   "require-dev": {
-    "phpunit/phpunit": "3.7.*"
+    "phpunit/phpunit": "^8"
   },
   "autoload": {
     "psr-4": {
